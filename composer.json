@@ -1,0 +1,75 @@
+{
+  "name": "tonegabes/mpac-essentials",
+  "description": "Utilidades compartilhadas para projetos Laravel da organização MPAC",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "tonegabes",
+    "laravel",
+    "mpac",
+    "essentials",
+    "utilities"
+  ],
+  "authors": [
+    {
+      "name": "ToneGabes",
+      "email": "tonegabes@gmail.com",
+      "homepage": "https://tonegabes.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0|^12.0",
+    "illuminate/contracts": "^11.0|^12.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.95",
+    "larastan/larastan": "^3.10",
+    "laravel/pint": "^1.18",
+    "orchestra/testbench": "^9.0|^10.0",
+    "pestphp/pest": "^3.0",
+    "pestphp/pest-plugin-laravel": "^3.0",
+    "phpstan/phpstan-deprecation-rules": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ToneGabes\\MpacEssentials\\": "src/"
+    },
+    "files": [
+      "src/Helpers/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ToneGabes\\MpacEssentials\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ToneGabes\\MpacEssentials\\EssentialsServiceProvider"
+      ],
+      "aliases": {
+        "MpacDocument": "ToneGabes\\MpacEssentials\\Facades\\DocumentFacade",
+        "MpacMask": "ToneGabes\\MpacEssentials\\Facades\\MaskFacade",
+        "MpacMoney": "ToneGabes\\MpacEssentials\\Facades\\MoneyFacade"
+      }
+    }
+  },
+  "scripts": {
+    "test": "pest",
+    "test:coverage": "pest --coverage",
+    "analyze": "phpstan analyse",
+    "lint": "pint --test",
+    "lint:fix": "pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
