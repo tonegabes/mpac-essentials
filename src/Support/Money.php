@@ -26,8 +26,8 @@ class Money
             ? (float) str_replace(['.', ','], ['', '.'], preg_replace('/[^\d,.-]/', '', $value) ?? '0')
             : (float) $value;
 
-        $currency ??= (string) config('essentials.currency', 'BRL');
-        $locale ??= (string) config('essentials.locale', 'pt_BR');
+        $currency ??= config()->string('essentials.currency', 'BRL');
+        $locale ??= config()->string('essentials.locale', 'pt_BR');
 
         if (class_exists(\NumberFormatter::class)) {
             $formatter = new \NumberFormatter($locale, \NumberFormatter::CURRENCY);
@@ -57,7 +57,7 @@ class Money
     /**
      * Converte centavos (int) para reais (float).
      */
-    public function fromCents(int|null $cents): float
+    public function fromCents(?int $cents): float
     {
         if ($cents === null) {
             return 0.0;

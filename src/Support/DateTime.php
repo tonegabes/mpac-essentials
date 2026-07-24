@@ -22,7 +22,7 @@ class DateTime
             ? $value
             : Carbon::parse($value);
 
-        return $date->timezone((string) config('essentials.timezone', 'America/Rio_Branco'))
+        return $date->timezone(config()->string('essentials.timezone', 'America/Rio_Branco'))
             ->format($format);
     }
 
@@ -39,6 +39,6 @@ class DateTime
      */
     public function now(): Carbon
     {
-        return Carbon::now((string) config('essentials.timezone', 'America/Rio_Branco'));
+        return Carbon::now(config()->string('essentials.timezone', 'America/Rio_Branco'));
     }
 }

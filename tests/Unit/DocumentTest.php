@@ -10,6 +10,13 @@ it('formats a valid cpf', function () {
     expect($document->formatCpf('52998224725'))->toBe('529.982.247-25');
 });
 
+it('returns original value when cpf length is invalid', function () {
+    $document = new Document;
+
+    expect($document->formatCpf('123'))->toBe('123');
+    expect($document->formatCpf(null))->toBe('');
+});
+
 it('validates cpf check digits', function () {
     $document = new Document;
 
@@ -22,6 +29,13 @@ it('formats a valid cnpj', function () {
     $document = new Document;
 
     expect($document->formatCnpj('11222333000181'))->toBe('11.222.333/0001-81');
+});
+
+it('returns original value when cnpj length is invalid', function () {
+    $document = new Document;
+
+    expect($document->formatCnpj('123'))->toBe('123');
+    expect($document->formatCnpj(null))->toBe('');
 });
 
 it('validates cnpj check digits', function () {

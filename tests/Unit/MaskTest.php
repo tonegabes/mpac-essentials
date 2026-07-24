@@ -11,11 +11,18 @@ it('applies a mask pattern', function () {
         ->toBe('123.456.789-01');
 });
 
+it('stops when value runs out of characters', function () {
+    $mask = new Mask;
+
+    expect($mask->apply('123', '###.###.###-##'))->toBe('123');
+});
+
 it('returns only digits', function () {
     $mask = new Mask;
 
     expect($mask->onlyDigits('123.456.789-01'))->toBe('12345678901');
     expect($mask->onlyDigits(null))->toBe('');
+    expect($mask->onlyDigits(''))->toBe('');
 });
 
 it('handles empty values when applying mask', function () {

@@ -27,10 +27,12 @@
     "friendsofphp/php-cs-fixer": "^3.95",
     "larastan/larastan": "^3.10",
     "laravel/pint": "^1.18",
+    "mrpunyapal/peststan": "^0.2.12",
     "orchestra/testbench": "^9.0|^10.0",
     "pestphp/pest": "^3.0",
     "pestphp/pest-plugin-laravel": "^3.0",
-    "phpstan/phpstan-deprecation-rules": "^2.0"
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -62,7 +64,7 @@
     "test:coverage": "pest --coverage",
     "analyze": "phpstan analyse",
     "lint": "pint --test",
-    "lint:fix": "pint"
+    "format": "pint"
   },
   "config": {
     "sort-packages": true,

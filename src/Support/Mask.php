@@ -33,6 +33,7 @@ class Mask
             if ($pattern[$i] === '#') {
                 $result .= $value[$valueIndex];
                 $valueIndex++;
+
                 continue;
             }
 

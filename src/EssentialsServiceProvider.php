@@ -19,7 +19,7 @@ class EssentialsServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/essentials.php',
+            __DIR__ . '/../config/mpac-essentials.php',
             'essentials'
         );
 
@@ -46,7 +46,7 @@ class EssentialsServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../config/essentials.php' => config_path('essentials.php'),
+            __DIR__ . '/../config/mpac-essentials.php' => config_path('mpac-essentials.php'),
         ], 'essentials-config');
     }
 }

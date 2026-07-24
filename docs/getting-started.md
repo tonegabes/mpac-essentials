@@ -4,7 +4,7 @@
 
 ```text
 mpac-essentials/
-├── config/essentials.php      # Config publicada com --tag=essentials-config
+├── config/mpac-essentials.php # Config publicada com --tag=essentials-config
 ├── src/
 │   ├── EssentialsServiceProvider.php
 │   ├── Facades/               # Facades Laravel

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace ToneGabes\MpacEssentials\Tests;
 
-use ToneGabes\MpacEssentials\EssentialsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use ToneGabes\MpacEssentials\EssentialsServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

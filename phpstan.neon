@@ -1,0 +1,34 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/mrpunyapal/peststan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+    parallel:
+        maximumNumberOfProcesses: 1
+
+    peststan:
+        testCaseClass: Tests\TestCase
+        pestConfigFiles:
+            - tests/Pest.php
+
+    paths:
+        - src
+
+    level: 10
+
+    ignoreErrors:
+        #
+
+    excludePaths:
+        #
+
+
+#        - ./*/*/FileToBeExcluded.php
+#
+#    checkMissingIterableValueType: false
+
+    tmpDir: /tmp/phpstan
