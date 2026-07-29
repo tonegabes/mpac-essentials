@@ -9,6 +9,7 @@
     "bootstrap/cache"
   ],
   "rules": {
+    "Pint/laravel_blade": true,
     "array_indentation": true,
     "array_syntax": { "syntax": "short" },
     "binary_operator_spaces": {
