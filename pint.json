@@ -6,7 +6,9 @@
     "tmp",
     "resources",
     "storage",
-    "bootstrap/cache"
+    "bootstrap/cache",
+    "public",
+    "docs"
   ],
   "rules": {
     "Pint/laravel_blade": true,
