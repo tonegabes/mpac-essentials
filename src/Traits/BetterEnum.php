@@ -28,7 +28,7 @@ trait BetterEnum
      */
     public static function options(): array
     {
-        return array_combine(self::names(), self::values());
+        return array_combine(self::values(), self::names());
     }
 
     public static function random(): self
